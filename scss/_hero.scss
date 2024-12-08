@@ -1,0 +1,98 @@
+@import "mixins";
+
+.hero-headline {
+	margin-bottom: 40px;
+	@include displayFlex(
+		$direction: row,
+		$align: start,
+		$justify: space-between,
+		$gap: 32px
+	);
+	width: 100vw;
+	height: 608px;
+	padding: 0;
+	margin: 0;
+
+	.article1-container {
+		position: relative;
+		@include displayFlex($align: start, $gap: 0);
+		margin-left: 68px;
+		width: 471px;
+		article {
+			@include displayFlex($align: start, $gap: 0);
+			@include stylization($margin: 123px 0 0 52px);
+			width: 462px;
+
+			h2 {
+				font-size: 40px;
+				line-height: 49.44px;
+			}
+
+			p {
+				line-height: 25.6px;
+				color: #565656;
+				margin: 40px 0 33px;
+			}
+
+			button {
+				@include stylization(
+					$font-size: 20px,
+					$line-height: 24.72px,
+					$color: white
+				);
+				letter-spacing: 1.3px;
+				border: none;
+				@include buttonContact;
+				cursor: pointer;
+			}
+
+			button:hover {
+				background-color: rgba(95, 95, 218, 0.682);
+			}
+		}
+		.article-ornament {
+			position: absolute;
+			top: 353px;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	.image-container-1 {
+		width: 817px;
+		height: 608px;
+		padding: 0;
+		position: relative;
+
+		&::before {
+			content: "";
+			background-color: #dae9ff;
+			border-radius: 50%;
+			z-index: -1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 129px;
+			height: 129px;
+		}
+
+		&::after {
+			content: "";
+			background-color: #fff5db;
+			border-radius: 0 0 100px 0;
+			position: absolute;
+			width: 178px;
+			height: 178px;
+			bottom: 0px;
+			right: 120px;
+			z-index: -1;
+		}
+
+		img {
+			margin: 0 0 96px 63px;
+			max-width: 92.29%;
+			height: 84.21%;
+			z-index: 1;
+		}
+	}
+}

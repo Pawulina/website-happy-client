@@ -1,0 +1,83 @@
+@import "mixins";
+
+.happy-client {
+	@include displayFlex($justify: start);
+	margin: 117px 69px 92px 107px;
+	width: 88vw;
+	height: 597px;
+
+	.happy-title {
+		width: 100%;
+		text-align: center;
+
+		h2 {
+			@include stylization($font-size: 40px, $line-height: 49px);
+		}
+
+		p {
+			@include stylization(
+				$font-size: 18px,
+				$line-height: 28.8px,
+				$color: #757575
+			);
+			margin-top: 17px;
+		}
+	}
+
+	.sliders-main-cont {
+		@include displayFlex($direction: row, $justify: flex-start, $gap: 38px);
+		height: 431px;
+		width: 100%;
+
+		.sliders-container {
+			width: 70%;
+
+			.swiper-two {
+				margin: 42px 0 0 10px;
+				width: 100%;
+
+				.swiper-wrapper {
+					width: 100%;
+					overflow: hidden;
+
+					.swiper-slide {
+						@include displayFlex(
+							$direction: row,
+							$justify: space-between,
+							$gap: 67px
+						);
+
+						.swiper-slide img {
+							width: 100%;
+							height: 389px;
+							width: 389px;
+							border-radius: 50% 0 50% 50%;
+							object-fit: cover;
+						}
+
+						.description-slider {
+							width: 412px;
+							height: 185px;
+							@include displayFlex($gap: 21px);
+							h2 {
+								@include stylization($font-size: 24px, $line-height: 29.66px);
+								text-align: start;
+							}
+							p {
+								@include stylization($line-height: 25.6, $color: #565656);
+								text-align: start;
+
+								width: 412px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.happy-clients-img {
+			width: 28%;
+			height: 355px;
+			margin: 42px 0 34px;
+		}
+	}
+}

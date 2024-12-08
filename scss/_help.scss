@@ -1,0 +1,164 @@
+@import "mixins";
+
+.help {
+	@include displayFlex($direction: row, $justify: space-between);
+	position: relative;
+	height: 867px;
+	width: 100vw;
+	margin-bottom: 146px;
+
+	&::before {
+		content: "";
+		width: 73%;
+		height: 619px;
+		background-color: #f4f9ff;
+		border-radius: 0 0 0 150px;
+		position: absolute;
+		top: 140px;
+		right: 0;
+		bottom: 108px;
+		z-index: -1;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		right: 143px;
+		bottom: 36px;
+		border-radius: 50%;
+		border: 8.8px solid #ff007a;
+		z-index: -2;
+	}
+
+	article {
+		@include displayFlex($align: start, $justify: start, $gap: 30px);
+		width: 448px;
+		height: 498px;
+		margin: 300px 0px 69px 82px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 178px;
+			height: 178px;
+			background-color: #fff5db;
+			border-radius: 100px 0 0 0;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+
+		&::after {
+			content: "";
+			width: 405px;
+			height: 154px;
+			position: absolute;
+			left: 38px;
+			bottom: 0;
+			background-image: url(../icons/Dot\ Ornament.png);
+			z-index: -2;
+		}
+
+		h2 {
+			@include stylization(
+				$font-size: 40px,
+				$line-height: 49.44px,
+				$margin: 60px 51px 0px 38px,
+				$padding: 0
+			);
+		}
+		p {
+			@include stylization($line-height: 25.6px, $color: #565656);
+			margin-left: 38px;
+		}
+	}
+
+	.card-container {
+		@include displayFlex($direction: row, $gap: 0);
+		width: 646px;
+		flex-wrap: wrap;
+		margin-right: 183px;
+
+		.card-wrapper1 {
+			@include displayFlex($gap: 30px);
+			margin-top: 79px;
+			padding: 0 15px 0 0;
+			width: 323px;
+			.one {
+				@include card-style;
+				div {
+					@include card-div-style;
+				}
+
+				h3 {
+					@include stylization($font-size: 24px, $line-height: 30px);
+					text-align: center;
+				}
+
+				p {
+					@include stylization($color: #757575);
+					text-align: center;
+				}
+			}
+			.two {
+				@include card-style;
+				div {
+					@include card-div-style($background-color: #fff2f8);
+				}
+				h3 {
+					@include stylization($font-size: 24px, $line-height: 30px);
+					text-align: center;
+				}
+
+				p {
+					@include stylization($color: #757575);
+					text-align: center;
+				}
+			}
+		}
+
+		.card-wrapper2 {
+			@include displayFlex($gap: 30px);
+			margin-bottom: 79px;
+			padding: 0 0 0 15px;
+			width: 323px;
+
+			.three {
+				@include card-style;
+
+				div {
+					@include card-div-style($background-color: #fff7e3);
+				}
+
+				h3 {
+					@include stylization($font-size: 24px, $line-height: 30px);
+					text-align: center;
+				}
+
+				p {
+					@include stylization($color: #757575);
+					text-align: center;
+				}
+			}
+			.four {
+				@include card-style;
+
+				div {
+					@include card-div-style($background-color: #deffee);
+				}
+				h3 {
+					@include stylization($font-size: 24px, $line-height: 30px);
+					text-align: center;
+				}
+
+				p {
+					@include stylization($color: #757575);
+					text-align: center;
+				}
+			}
+		}
+	}
+}

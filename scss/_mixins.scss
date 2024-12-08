@@ -1,0 +1,68 @@
+@mixin displayFlex(
+	$display: flex,
+	$direction: column,
+	$align: center,
+	$justify: center,
+	$gap: 20px
+) {
+	display: $display;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+	gap: $gap;
+}
+
+@mixin stylization(
+	$font-family: "MyFont",
+	$font-size: 16px,
+	$line-height: 20px,
+	$color: black,
+	$margin: 0,
+	$padding: 0
+) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+	margin: $margin;
+	padding: $padding;
+}
+
+@mixin buttonContact {
+	display: flex;
+	padding: 20px 40px;
+	background-color: #2639ed;
+	border-radius: 60px;
+	justify-content: center;
+	align-content: center;
+	width: 215px;
+	height: 65px;
+	text-wrap: nowrap;
+}
+
+@mixin card-style {
+	@include displayFlex;
+	width: 308px;
+	height: 379px;
+	padding: 39px 32px 57px 31px;
+	background-color: white;
+	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+	border-radius: 40px;
+	border: 1px solid #f2f2f2;
+}
+
+@mixin card-div-style(
+	$width: 121px,
+	$height: 121px,
+	$radius: 20px,
+	$background-color: #f1f7ff,
+	$align: center,
+	$padding: 0 24px
+) {
+	width: $width;
+	height: $height;
+	border-radius: $radius;
+	background-color: $background-color;
+	align-content: $align;
+	padding: $padding;
+}

@@ -1,0 +1,44 @@
+@import "mixins";
+
+header {
+	margin: 0 auto;
+	padding: 40px 120px;
+
+	.header-wrapper {
+		@include displayFlex($direction: row, $justify: space-between, $gap: 435px);
+		max-width: 1200px;
+		width: 100%;
+		padding: 0;
+
+		.logo {
+			@include stylization($font-size: 27.15px, $line-height: 33.55px);
+			text-wrap: nowrap;
+			span {
+				@include stylization(
+					$font-family: "Arial",
+					$font-size: 27.15px,
+					$line-height: 33.55px
+				);
+				font-weight: bold;
+			}
+		}
+
+		.header-menu {
+			@include displayFlex($direction: row, $gap: 60px);
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			a {
+				@include stylization;
+				text-decoration: none;
+				letter-spacing: 0.16px;
+				text-wrap: nowrap;
+			}
+
+			a:hover {
+				cursor: pointer;
+				background-color: bisque;
+			}
+		}
+	}
+}

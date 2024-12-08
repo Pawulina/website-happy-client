@@ -1,0 +1,27 @@
+@import "mixins";
+
+.our-client {
+	@include displayFlex($direction: row, $justify: space-between);
+	margin-left: 120px;
+	margin-bottom: 94px;
+	article {
+		@include displayFlex($align: start, $gap: 17px);
+		h2 {
+			@include stylization($font-size: 40px, $line-height: 49.44px);
+		}
+
+		p {
+			@include stylization(
+				$font-size: 18px,
+				$line-height: 28.8px,
+				$color: #757575
+			);
+			width: 336px;
+			text-wrap: wrap;
+		}
+	}
+
+	.swiper {
+		margin-left: 60px;
+	}
+}

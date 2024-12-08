@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@import "header";
+@import "hero";
+@import "our-client";
+@import "help";
+@import "great-since";
+@import "happy-client";
+@import "newsletter";
+@import "footer";
+
+@font-face {
+	font-family: "MyFont";
+	src: url(../fonts/AvertaDemoPECuttedDemo-Regular.otf) format("opentype");
+	font-weight: 400;
+	font-style: normal;
+}

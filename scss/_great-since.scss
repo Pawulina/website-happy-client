@@ -1,0 +1,61 @@
+@import "mixins";
+
+.great-since {
+	@include displayFlex($direction: row, $justify: space-between, $gap: 80);
+	width: 83vw;
+	margin: 0 120px;
+
+	.iframe-cont {
+		width: 550px;
+		height: 372px;
+		box-shadow: 10px 20px 50px 0 #00000026;
+		position: relative;
+
+		iframe {
+			border-radius: 32px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 129px;
+			height: 129px;
+			left: 462px;
+			top: 307px;
+			background-color: #fff5db;
+			border-radius: 50%;
+			z-index: -1;
+		}
+	}
+
+	article {
+		width: 570px;
+		height: 256px;
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 178px;
+			height: 178px;
+			left: 0px;
+			top: 0px;
+			background: #eff1ff;
+			border-radius: 0px 0px 100px 0px;
+			z-index: -1;
+		}
+
+		h2 {
+			@include stylization($font-size: 40px, $line-height: 49px);
+			text-wrap: wrap;
+			margin-left: 38px;
+			margin-top: 24px;
+		}
+
+		p {
+			@include stylization($line-height: 25.6px, $color: #565656);
+			margin-top: 30px;
+			margin-left: 38px;
+		}
+	}
+}
