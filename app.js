@@ -2,7 +2,7 @@ AOS.init();
 
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-const swiper = new Swiper(".swiper", {
+const swiperOne = new Swiper(".swiper", {
 	direction: "horizontal",
 	slidesPerView: 4,
 	spaceBetween: 59.5,
@@ -17,14 +17,15 @@ const swiper = new Swiper(".swiper", {
 const swiperTwo = new Swiper(".swiper-two", {
 	direction: "horizontal",
 	slidesPerView: 1,
-	loop: false,
+	spaceBetween: 100,
+	loop: true,
 	autoplay: {
-		delay: 2000,
+		delay: 4000,
 		disableOnInteraction: false,
 	},
-	speed: 3000,
+	speed: 4000,
 	pagination: {
-		el: ".swiper-paginations-two",
+		el: ".swiper-pagination",
 		clickable: true,
 	},
 });
